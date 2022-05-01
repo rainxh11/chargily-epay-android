@@ -3,7 +3,7 @@ Chargily ePay Gateway (Android SDK)
 
 ![Chargily ePay Gateway](https://raw.githubusercontent.com/Chargily/epay-gateway-php/main/assets/banner-1544x500.png "Chargily ePay Gateway")
 
-This Package is to integrate ePayment gateway with Chargily easily.
+ This Package is to integrate ePayment gateway with Chargily easily.
 - Currently support payment by **CIB / EDAHABIA** cards and soon by **Visa / Mastercard** 
 - This repo is recently created for **Android SDK**, If you are a developer and want to collaborate to the development of this Package, you are welcomed!
 
