@@ -9,7 +9,6 @@
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm") version "1.6.21"
-    kotlin("multiplatform") version "1.7.10"
     id("maven-publish")
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
@@ -24,15 +23,6 @@ repositories {
     mavenLocal()
 }
 
-kotlin {
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation("org.jetbrains.base64:multiplatform-lib:1.0.0")
-            }
-        }
-    }
-}
 
 dependencies {
     // Align versions of all Kotlin components
