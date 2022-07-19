@@ -21,7 +21,6 @@ class ChargilyTest {
             val response = chargily.createInvoice(invoice)
             println(response.body()?.checkoutUrl)
             assertIs<Response<ChargilyResponse>>(response, "'createInvoice()' returns Response<ChargilyResponse>")
-
         }
     }
 }

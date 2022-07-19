@@ -1,8 +1,9 @@
 import chargily.epay.android.*
 import kotlinx.coroutines.*
 
+
 class Main {
-    fun main() {
+    suspend fun main() {
         val chargily = Chargily("api_KFWtdBczv0qnAMHNxGXCGVK93yEZahZwr4EgFa4xmfnLTIJkezPvW0LgqholrC7S")
         val invoice = Invoice(
             client = "Ahmed Chakhoum",
@@ -19,6 +20,9 @@ class Main {
             val checkOutUrl = response.body()?.checkoutUrl  // Checkout Url
             println(checkOutUrl)
         }
-
+        val scope = NetworkScope()
+        val response = chargily.createInvoiceAsync(invoice, scope).await()
+        val checkOutUrl = response.body()?.checkoutUrl  // Checkout Url
+        println(checkOutUrl)
     }
 }

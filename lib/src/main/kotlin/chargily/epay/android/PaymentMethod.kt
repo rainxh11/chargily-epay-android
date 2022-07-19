@@ -1,6 +1,6 @@
 package chargily.epay.android
 
-import com.google.gson.annotations.SerializedName
+import com.google.gson.annotations.*
 
 enum class PaymentMethod {
     @SerializedName("EDAHABIA") EDAHABIA,

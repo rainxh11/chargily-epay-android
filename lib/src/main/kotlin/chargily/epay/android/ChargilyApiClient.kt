@@ -1,12 +1,11 @@
 package chargily.epay.android
 
 import retrofit2.*
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import okhttp3.OkHttpClient
-import retrofit2.converter.gson.GsonConverterFactory
+import com.google.gson.*
+import okhttp3.*
+import retrofit2.converter.gson.*
 
-object ChargilyApiClient {
+internal object ChargilyApiClient {
     private const val BASE_URL: String = "https://epay.chargily.com.dz"
 
     private val gson : Gson by lazy {
