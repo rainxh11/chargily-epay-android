@@ -1,5 +1,6 @@
-<img src="https://raw.githubusercontent.com/rainxh11/chargily-epay-java/master/assets/chargily_kotlin.svg" heigh="300">
-### Chargily ePay Gateway Kotlin (Android SDK) with JAVA Support
+<img src="https://raw.githubusercontent.com/rainxh11/chargily-epay-android/master/assets/chargily_kotlin.svg" heigh="300">
+
+###  Chargily ePay Gateway Kotlin (Android SDK) with JAVA Support
 
 ![Chargily ePay Gateway](https://raw.githubusercontent.com/Chargily/epay-gateway-php/main/assets/banner-1544x500.png "Chargily ePay Gateway")
 
