@@ -9,7 +9,19 @@
 - This repo is recently created for **Android SDK**, If you are a developer and want to collaborate to the development of this Package, you are welcomed!
 
 # Instaltation:
-*Soon*
+[![](https://jitpack.io/v/rainxh11/chargily-epay-android.svg)](https://jitpack.io/#rainxh11/chargily-epay-android)
+To install add Jitpack Repository & chargily package dependency to `build.gradle.kts` gradle build file:
+```kotlin
+repositories {
+    ...
+    maven {
+        url = uri("https://jitpack.io")
+    }
+}
+dependencies {
+    implementation("com.github.rainxh11:chargily-epay-android:1.0")
+}
+```
 # Usage:
 ### Using coroutines:
 ```kotlin
@@ -61,7 +73,6 @@ class Main {
         val response = chargily.createInvoiceAsync(invoice, scope).await()
         val checkOutUrl = response.body()?.checkoutUrl  // Checkout Url
         println(checkOutUrl)
-
     }
 }
 ```
