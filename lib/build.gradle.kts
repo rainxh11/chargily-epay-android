@@ -44,13 +44,13 @@ repositories {
 
 
 dependencies {
-    implementation("com.github.rainxh11:chargily-epay-android:1.0-SNAPSHOT")
+    //implementation("com.github.rainxh11:chargily-epay-android:1.0-SNAPSHOT")
 
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     // Use the Kotlin JDK 8 standard library.
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation(kotlin("stdlib-jdk8"))
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation("com.google.guava:guava:31.0.1-jre")
