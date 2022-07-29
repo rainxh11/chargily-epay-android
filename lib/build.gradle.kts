@@ -26,7 +26,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "chargily"
             artifactId = "chargily.epay"
-            version = "1.0-SNAPSHOT"
+            version = "1.0"
 
             from(components["java"])
         }
