@@ -5,26 +5,53 @@
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
  * User Manual available at https://docs.gradle.org/7.5/userguide/building_java_projects.html
  */
+System.out.println(System.getenv("AUTHENTICATION_TOKEN"))
+
 
 plugins {
-    // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.6.21"
-    id("maven-publish")
-    // Apply the java-library plugin for API and implementation separation.
-    `java-library`
+    java
+    kotlin("jvm") version "1.6.0"
+    `maven-publish`
 }
 
-group = "chargily"
-version = "1.0.0"
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+}
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "chargily"
+            artifactId = "chargily.epay"
+            version = "1.0.0"
+
+            from(components["java"])
+        }
+    }
+}
 
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
     mavenLocal()
+    maven {
+        url = uri("https://jitpack.io")
+        credentials {
+            username = System.getenv("AUTHENTICATION_TOKEN")
+        }
+    }
 }
 
 
 dependencies {
+    implementation("com.github.rainxh11:chargily-epay-android:1.0-SNAPSHOT")
+
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
