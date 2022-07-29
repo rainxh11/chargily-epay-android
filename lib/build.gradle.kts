@@ -5,9 +5,6 @@
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
  * User Manual available at https://docs.gradle.org/7.5/userguide/building_java_projects.html
  */
-System.out.println(System.getenv("AUTHENTICATION_TOKEN"))
-
-
 plugins {
     java
     kotlin("jvm") version "1.6.0"
@@ -42,9 +39,6 @@ repositories {
     mavenLocal()
     maven {
         url = uri("https://jitpack.io")
-        credentials {
-            username = System.getenv("AUTHENTICATION_TOKEN")
-        }
     }
 }
 
